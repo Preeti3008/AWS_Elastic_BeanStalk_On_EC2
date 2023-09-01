@@ -5,7 +5,7 @@ on :
             - "main"
 jobs:
     deploy: 
-        runs-on: ubuntu-latest
+        runs-on: main-server
         steps:
         - name: Checkout source code
           uses: actions/checkout@v2
@@ -16,11 +16,11 @@ jobs:
         - name: Deploy to EB
           uses: einaregilsson/beanstalk-deploy@v21
           with:
-            aws_access_key: ${{ secrets.AWS_ADMIN_ACCESS_KEY_ID }}
-            aws_secret_key: ${{ secrets.AWS_ADMIN_SECRET_ACCESS_KEY_ID }}
+            aws_access_key: ${{ secrets.AWS__ACCESS_KEY_ID }}
+            aws_secret_key: ${{ secrets.AWS__SECRET_ACCESS_KEY_ID }}
             application_name: docker-react
             environment_name: Dockerreact-env
             version_label: ${{ github.sha }}
-            existing_bucket_name: elasticbeanstalk-us-east-1-354408555228
-            region: us-east-1
+            existing_bucket_name: elasticbeanstalk-ap-south-1-899461659254
+            region: ap-south-1
             deployment_package: deploy.zip
