@@ -19,7 +19,7 @@ jobs:
             aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
             aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             application_name: reactapplication
-            environment_name: reactapplication-env
+            environment_name: Reactapplication-env
             version_label: ${{ github.sha }}
             existing_bucket_name: elasticbeanstalk-ap-south-1-899461659254
             region: ap-south-1
