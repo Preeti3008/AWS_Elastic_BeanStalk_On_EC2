@@ -17,7 +17,7 @@ jobs:
           uses: einaregilsson/beanstalk-deploy@v21
           with:
             aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
             application_name: reactapplication
             environment_name: Reactapplication-env
             version_label: ${{ github.sha }}
