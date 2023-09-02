@@ -18,7 +18,7 @@ jobs:
           with:
             aws_access_key: ${{ secrets.AWS_ADMIN_ACCESS_KEY_ID }}
             aws_secret_key: ${{ secrets.AWS_ADMIN_SECRET_ACCESS_KEY_ID }}
-            application_name: reactapplication
+            application_name: react-application
             environment_name: React-application-env
             version_label: ${{ github.sha }}
             existing_bucket_name: elasticbeanstalk-ap-south-1-899461659254
